@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
               typename: 'Medicine',
               page: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MedicinePage()));
+                    MaterialPageRoute(builder: (context) => MedicineCard()));
               },
             ),
             TypeCard(
