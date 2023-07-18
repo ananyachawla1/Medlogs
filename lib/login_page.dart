@@ -1,49 +1,52 @@
 import 'package:flutter/material.dart';
+import '../home.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold( 
-      body:SafeArea(
-     child: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-        children:[
-          SizedBox(
-            height:100,
-          ),
-          Text( 
-            'Get Started',style:TextStyle(fontWeight:FontWeight.bold,fontSize:27),
-          ),
-          Text( 
-            'Start your 30-day free trial.',
-            style:TextStyle(fontWeight:FontWeight.bold,fontSize:12),
-      
-          ),
-          SizedBox(
-            height:20,
-          ),
-          Text(
-            'Name*',
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            SizedBox(
+              height: 100,
+            ),
+            Text(
+              'Get Started',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 27),
+            ),
+            Text(
+              'Start your 30-day free trial.',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical:10),
-            child: SizedBox(
-              height:50,
-              child:TextFormField(decoration:InputDecoration(
-                hintText:"Enter your name",
-                border:OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Name*',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: SizedBox(
+                height: 50,
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: "Enter your name",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                  ),
                 ),
               ),
-              ),
-          ),
-          Text( 
-            'Email*',
+            ),
+            Text(
+              'Email*',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
-          ),
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10),
               child: SizedBox(
@@ -57,7 +60,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-                Text(
+            Text(
               'Password*',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
             ),
@@ -78,10 +81,49 @@ class LoginPage extends StatelessWidget {
               'Must be at least 8 characters.',
               style: TextStyle(fontSize: 12),
             ),
-        ]),
-      )
+            SizedBox(
+              height: 20,
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Home()));
+                },
+                child: Text('Create Account'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black54),
+                    borderRadius: BorderRadius.circular(10)),
+                width: double.infinity,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.search),
+                      Text(
+                        'Sign in with Google',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ]),
         ),
-      )
+      ),
     );
   }
 }

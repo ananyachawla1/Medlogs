@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medlogs/widget/type_card.dart';
 import 'package:medlogs/widget/medicine_card.dart';
+import 'package:medlogs/report.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -43,13 +44,13 @@ class HomePage extends StatelessWidget {
           children: [
             TypeCard(
               typeName: 'Medicine',
-              page: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => MedicineCard(
-                            medicine: 'dolo', time: 'Twelve', quantity: 400)));
-              },
+              // page: () {
+              //   Navigator.push(
+              //       context,
+              //       MaterialPageRoute(
+              //           builder: (context) => MedicineCard(
+              //               medicine: 'dolo', time: 'Twelve', quantity: 400)));
+              // },
             ),
             TypeCard(
               typeName: 'Medical Reports',
