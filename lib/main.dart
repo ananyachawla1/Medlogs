@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'home_page.dart';
+import 'package:medlogs/home.dart';
+import 'package:medlogs/login_page.dart';
 
 void main() {
   runApp(const MyApp());
