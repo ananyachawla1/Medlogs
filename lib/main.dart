@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:medlogs/home.dart';
 import 'package:medlogs/login_page.dart';
 
 void main() {

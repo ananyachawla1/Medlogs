@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.3 <4.0.0'
+  sdk: '>=2.19.6 <3.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -30,7 +30,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  dotted_border: ^2.0.0+3
+  amplify_flutter: ^0.2.0
+  amplify_datastore: ^0.2.0
+  amplify_datastore_plugin_interface: ^0.2.4
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -52,20 +55,29 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  uses-material-design: true
+  
+  assets:
+    - images/
+  fonts:
+    - family: Pacifico  
+      fonts:
+        - asset: fonts/Pacifico-Regular.ttf
 
+    - family: Capra  
+      fonts:
+        - asset: fonts/Caprasimo-Regular.ttf        
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: true
+    
 
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
-    assets:
-      - images/logo.jpg
 
-  # An image asset can refer to one or more resolution-specific "variants", see
+  # An image asset can refer to o55ne or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
   # For details regarding adding assets from package dependencies, see
