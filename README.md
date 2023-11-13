@@ -8,4 +8,4 @@
 
 ## Wireframing
 
-[Wireframe](https://i.ibb.co/1nJgqZq/Whats-App-Image-2023-11-13-at-20-00-46.jpg)
+![Wireframe](https://i.ibb.co/1nJgqZq/Whats-App-Image-2023-11-13-at-20-00-46.jpg)
